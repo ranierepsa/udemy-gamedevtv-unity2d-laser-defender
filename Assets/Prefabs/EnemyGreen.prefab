@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 933060198643873480}
   - component: {fileID: -101923333062035426}
   - component: {fileID: -6961492301685895732}
-  - component: {fileID: -1872052408287092199}
+  - component: {fileID: -2151869552261556472}
+  - component: {fileID: 7189859372431621740}
+  - component: {fileID: 8622241404657930666}
   m_Layer: 9
   m_Name: EnemyGreen
   m_TagString: Untagged
@@ -108,18 +110,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c366e1314c5106449e180cf26f7f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 600
+  scoreValue: 460
   shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  projectile: {fileID: 7043273088382410468, guid: c1ab2562be528d6478c0504b5a3bc7dd,
+  minTimeBetweenShots: 1.5
+  maxTimeBetweenShots: 2.5
+  projectile: {fileID: 7043273088382410468, guid: be744ef688ee1384c9dc2f9ff9ce69f5,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 5
   deathVFX: {fileID: 4789425587157762561, guid: 68d073cd4776f4ca1b06d8bf494c2fc2,
     type: 3}
   durationOfExplosion: 1
---- !u!61 &-1872052408287092199
-BoxCollider2D:
+  deathSound: {fileID: 8300000, guid: 50d62532ca43cab499df9882113c02af, type: 3}
+  deathSoundVolume: 0.75
+  shootSound: {fileID: 8300000, guid: e9d350c5690a39347bb14b1b0af900a9, type: 3}
+  shootSoundVolume: 0.2
+--- !u!50 &-2151869552261556472
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933060198643873481}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7189859372431621740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933060198643873481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45a73df70b262c40809aaa7f7c92a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
+--- !u!60 &8622241404657930666
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,12 +176,37 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.97, y: 0.84}
+    oldSize: {x: 1.94, y: 1.68}
     newSize: {x: 0.97, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.97, y: 0.84}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9196022, y: 0.56122005}
+      - {x: 0.96999997, y: 0.84}
+      - {x: 0.60305023, y: 0.84}
+      - {x: 0.31122014, y: 0.6428648}
+      - {x: 0.2503726, y: 0.6099891}
+      - {x: 0.24810219, y: 0.51942766}
+      - {x: 0.24183024, y: 0.50716186}
+      - {x: 0.0008203462, y: 0.58343065}
+      - {x: -0.06734756, y: 0.5655173}
+      - {x: -0.25286478, y: 0.51411164}
+      - {x: -0.24377733, y: 0.6048299}
+      - {x: -0.5179575, y: 0.7669496}
+      - {x: -0.60713524, y: 0.84}
+      - {x: -0.96999997, y: 0.84}
+      - {x: -0.9408223, y: 0.63448256}
+      - {x: -0.79960215, y: 0.14795752}
+      - {x: -0.5834749, y: -0.59347486}
+      - {x: -0.5606101, y: -0.6428648}
+      - {x: -0.34986466, y: -0.644761}
+      - {x: -0.34708217, y: -0.7393787}
+      - {x: -0.24755976, y: -0.8426525}
+      - {x: 0.2355173, y: -0.84265256}
+      - {x: 0.3471146, y: -0.74097353}
+      - {x: 0.34878, y: -0.6445094}
+      - {x: 0.55938995, y: -0.6481699}
+      - {x: 0.58082235, y: -0.5946949}
